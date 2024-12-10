@@ -1,0 +1,14 @@
+{"allowlist": [], "blocklist": [
+    {
+        "common_name": "phmwwkosdooalbhrtisdnrtfeuknodywzsdtrualsekcxqicvmbiaikpchjqtccyynqmtbtswqpbflpydefeyaezobhyjrxgkengscbofjk", 
+        "detection_name": "Gen:Variant.Razy", 
+        "malware_type": "Trojan", 
+        "serial_number": "*"
+    }, 
+    {
+        "common_name": "cayildir", 
+        "detection_name": "Trojan.Farfli.b", 
+        "malware_type": "Trojan", 
+        "serial_number": "42d5853c28c3ef9344eb1688aae8aa1e_"
+    }
+]}

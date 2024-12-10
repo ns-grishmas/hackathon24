@@ -1,0 +1,744 @@
+{
+    "_id" : "6324255ff29003e16575e9a58cfbcf71",
+    "creation_date" : "2024-12-09T09:23:49.639+0000",
+    "file_type" : "application/x-dosexec",
+    "first_seen_on" : 1733736229.6398444,
+    "instances" : [
+        {
+            "orgkey" : "oa8dDVNbKXoTsttKIchT",
+            "tenant_name" : "",
+            "instance_id" : "ntrlskope.com",
+            "app_name" : "Google Drive",
+            "file_id" : "93640c2d4f02db5877213bbb5d7de7a4",
+            "first_seen_on" : 1733736229.6398444
+        }
+    ],
+    "last_scanned_on" : 1733736277.7369506,
+    "last_seen_on" : "2024-12-09T09:24:37.737+0000",
+    "md5" : "6324255ff29003e16575e9a58cfbcf71",
+    "scan_duration" : 0.19422554969787598,
+    "sha1" : "d3874d01f54719ff2c70106b3fae24c45b0e4716",
+    "sha256" : "acf7e0abfcf5403c9a3c2f7dabd0a9158b4645337d5f9bb608c7d1c5afed35dc",
+    "true_filetype" : "None",
+    "urls" : [
+
+    ],
+    "version" : {
+
+    },
+    "rlabs" : {
+        "result" : {
+            "tc_report" : [
+                {
+                    "info" : {
+                        "file" : {
+                            "file_name" : "file",
+                            "hashes" : [
+                                {
+                                    "name" : "imphash",
+                                    "value" : "6addf76b99e1993d25c1a6eb9ee69ff0"
+                                },
+                                {
+                                    "name" : "md5",
+                                    "value" : "6324255ff29003e16575e9a58cfbcf71"
+                                },
+                                {
+                                    "name" : "rha0",
+                                    "value" : "526d1160a6d29136619b3c382a15de6a55715cdb"
+                                },
+                                {
+                                    "name" : "sha1",
+                                    "value" : "d3874d01f54719ff2c70106b3fae24c45b0e4716"
+                                },
+                                {
+                                    "name" : "sha256",
+                                    "value" : "acf7e0abfcf5403c9a3c2f7dabd0a9158b4645337d5f9bb608c7d1c5afed35dc"
+                                }
+                            ]
+                        }
+                    },
+                    "indicators" : [
+                        {
+                            "priority" : 7,
+                            "category" : 0,
+                            "description" : "Contains URIs related to Symantec security products."
+                        },
+                        {
+                            "priority" : 4,
+                            "category" : 0,
+                            "description" : "Contains URLs."
+                        },
+                        {
+                            "priority" : 3,
+                            "category" : 14,
+                            "description" : "Contains one or more script files."
+                        },
+                        {
+                            "priority" : 3,
+                            "category" : 7,
+                            "description" : "Detects/enumerates process modules."
+                        },
+                        {
+                            "priority" : 3,
+                            "category" : 10,
+                            "description" : "Terminates a process/thread."
+                        }
+                    ],
+                    "interesting_strings" : [
+                        {
+                            "category" : "http",
+                            "values" : [
+                                "0.fi",
+                                "4.af",
+                                "4.gs",
+                                "4o.ax",
+                                "e.sc",
+                                "http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0",
+                                "http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0",
+                                "http://cacerts.digicert.com/DigiCertSHA2AssuredIDTimestampingCA.crt0",
+                                "http://crl.thawte.com/ThawteTimestampingCA.crl0",
+                                "http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O",
+                                "http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0P",
+                                "http://crl3.digicert.com/sha2-assured-cs-g1.crl05",
+                                "http://crl3.digicert.com/sha2-assured-ts.crl02",
+                                "http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:",
+                                "http://crl4.digicert.com/sha2-assured-cs-g1.crl0L",
+                                "http://crl4.digicert.com/sha2-assured-ts.crl0",
+                                "http://ocsp.digicert.com0c",
+                                "http://ocsp.digicert.com0n",
+                                "http://ocsp.digicert.com0o",
+                                "http://ocsp.thawte.com0",
+                                "http://ts-aia.ws.symantec.com/tss-ca-g2.cer0",
+                                "http://ts-crl.ws.symantec.com/tss-ca-g2.crl0(",
+                                "http://ts-ocsp.ws.symantec.com07",
+                                "i.ms",
+                                "j.uy",
+                                "m.py",
+                                "n.tj",
+                                "p.st",
+                                "r.ar",
+                                "r.so",
+                                "t.sv",
+                                "t6.tg",
+                                "v.cc",
+                                "x6nx.pe",
+                                "yf.hn",
+                                "z.ir"
+                            ]
+                        },
+                        {
+                            "category" : "https",
+                            "values" : [
+                                "https://www.digicert.com/CPS0"
+                            ]
+                        }
+                    ],
+                    "classification" : {
+                        "scan_results" : [
+                            {
+                                "name" : "TitaniumCloud",
+                                "classification" : 3,
+                                "result" : "Win32.Backdoor.Zegost",
+                                "factor" : 5,
+                                "type" : "cloud",
+                                "properties" : [
+                                    {
+                                        "name" : "scannerCount",
+                                        "value" : "32"
+                                    },
+                                    {
+                                        "name" : "scannerMatch",
+                                        "value" : "22"
+                                    },
+                                    {
+                                        "name" : "firstSeen",
+                                        "value" : "2020-08-01T21:23:44"
+                                    },
+                                    {
+                                        "name" : "lastSeen",
+                                        "value" : "2022-05-25T23:29:27"
+                                    }
+                                ]
+                            }
+                        ],
+                        "classification" : 3,
+                        "factor" : 5,
+                        "scan_results_length" : 1
+                    },
+                    "metadata" : {
+                        "application" : {
+                            "capabilities" : 16789560,
+                            "pe" : {
+                                "file_header" : {},
+                                "overlay" : {
+                                    "has_overlay" : true,
+                                    "offset" : 3080192,
+                                    "hashes" : [
+                                        {
+                                            "name" : "md5",
+                                            "value" : "addf74505678061b0ffdeadcc5ba8a94"
+                                        },
+                                        {
+                                            "name" : "sha1",
+                                            "value" : "146328665d883adf91f8269e27b46a58c0780c89"
+                                        },
+                                        {
+                                            "name" : "sha256",
+                                            "value" : "ecc0b9ae882401d25b59992ed1bd0712a5c9e9df07478a7a7c992f8a5ee07af0"
+                                        }
+                                    ],
+                                    "size" : 104
+                                },
+                                "imports" : [
+                                    {
+                                        "name" : "KERNEL32.dll",
+                                        "apis" : [
+                                            "WriteFile",
+                                            "CreateFileA",
+                                            "WinExec",
+                                            "ExitProcess",
+                                            "GetFileAttributesA",
+                                            "CloseHandle"
+                                        ]
+                                    },
+                                    {
+                                        "name" : "MFC42.DLL",
+                                        "apis" : [
+                                            "0x032f",
+                                            "0x0231"
+                                        ]
+                                    },
+                                    {
+                                        "name" : "MSVCP60.dll",
+                                        "apis" : [
+                                            "??1_Winit@std@@QAE@XZ",
+                                            "??0_Winit@std@@QAE@XZ",
+                                            "??1Init@ios_base@std@@QAE@XZ",
+                                            "??0Init@ios_base@std@@QAE@XZ"
+                                        ]
+                                    },
+                                    {
+                                        "name" : "MSVCRT.dll",
+                                        "apis" : [
+                                            "__p__fmode",
+                                            "_except_handler3",
+                                            "_controlfp",
+                                            "__p__commode",
+                                            "_adjust_fdiv",
+                                            "__setusermatherr",
+                                            "_initterm",
+                                            "__getmainargs",
+                                            "__p___initenv",
+                                            "exit",
+                                            "_XcptFilter",
+                                            "_exit",
+                                            "_onexit",
+                                            "__dllonexit",
+                                            "__set_app_type"
+                                        ]
+                                    }
+                                ],
+                                "optional_header" : {},
+                                "dos_header" : {},
+                                "sections" : [
+                                    {
+                                        "name" : ".text",
+                                        "entropy" : 0.5932242367,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "7b3786c04ccd93fc78eb2d9cf974aab5"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "9e92b21c53b4cf2d6792276517310c4575562e2a"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "7157d063b393a7344571f673ead4bfeded800d7bf588ad099e18b61087d51886"
+                                            }
+                                        ],
+                                        "size" : 73728
+                                    },
+                                    {
+                                        "name" : ".rdata",
+                                        "entropy" : 0.8334809904,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "80c409f5595a9c67a4e477f3c1263af7"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "5bd51c9eabb48855ca4ae11de8d673527e9afe69"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "c652cdce44b688e834afff18074e891559d811f4e7c0d7a538349ef9e1dc355b"
+                                            }
+                                        ],
+                                        "size" : 4096
+                                    },
+                                    {
+                                        "name" : ".data",
+                                        "entropy" : 6.9169967848,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "bd5b6d58ebc66e2739eb8e604ece90a8"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "a1442dee651904195200587e0ccfc2543d2a6b0a"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "09f88a383af3a8eb17944ddde00b663594c5fb050f77cf852f72ff7f82b691fd"
+                                            }
+                                        ],
+                                        "size" : 1212416
+                                    },
+                                    {
+                                        "name" : ".idata",
+                                        "entropy" : 0.7249874348,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "b100a6493ae1eb852e6485a3d050a3cc"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "d429f0418c3c023e5ead935d8160c3af3fcd0ea4"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "9643ea6615af2f7d4a34ebe7bff8972e1a5a71eae480cdf333f2c3159048fc45"
+                                            }
+                                        ],
+                                        "size" : 4096
+                                    },
+                                    {
+                                        "name" : ".virbox",
+                                        "entropy" : 5.3908940254,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "3d755c42d29ad8381bdd2547087750c9"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "586831605707c0e6223edd7723f2151c8f50d1ab"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "c7a23ca6080809403501c341d6e73e71991baf5c43e3d94b6209e75f4e621b32"
+                                            }
+                                        ],
+                                        "size" : 163840
+                                    },
+                                    {
+                                        "name" : ".vdata0",
+                                        "entropy" : 7.9997088341,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "45de0b8229e0ffa794637bca8ffc6f70"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "bf8e31512af07c11e5906dea212cd21ee2a0967a"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "36d2f10445f93042c10cdc04e07281699547f37e84f6eddbfadc81a3dbe01112"
+                                            }
+                                        ],
+                                        "size" : 1597440
+                                    },
+                                    {
+                                        "name" : ".vdata1",
+                                        "entropy" : 4.3850229045,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "cc350c3a8256c2547ac882dc647a5012"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "90089c26a8989e9369d3816e8e8d79f563d381f0"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "c816bb1f6dce9678365617a27e7b29ca25e1e550b018fbf9ecf02569cc57ad90"
+                                            }
+                                        ],
+                                        "size" : 12288
+                                    },
+                                    {
+                                        "name" : ".rsrc",
+                                        "entropy" : 0.9538900088,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "019c52561cf4d0b6a5b85f642b4f3454"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "64d8b63cd5091e4fe9a67f1ebbae9f3329954603"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "f328162c75309d688e0838c4d6c4fafeace6706435022e4e97ed1545662b061b"
+                                            }
+                                        ],
+                                        "size" : 4096
+                                    },
+                                    {
+                                        "name" : ".reloc",
+                                        "entropy" : 2.403565472,
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "4c908a74c52567dc440ba337bbfed0b4"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "34ae6f0301be3ea7f2862456202ca8502ee43787"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "0f2b83b30b04a6e72cd98ba7079c05fb21eed3c2f39a1f7de4250ef6d3b3e9e4"
+                                            }
+                                        ],
+                                        "size" : 4096
+                                    }
+                                ],
+                                "resources" : [
+                                    {
+                                        "name" : "136",
+                                        "type" : "RT_BITMAP",
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "08b28f94e209f9b7ea3c0a9698cedb2b"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "d8fc8a011d9128b9b27cf64ebf6756e4658e97d2"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "8d312a5fabf56076597cbcabdaa5b5fa1a726796364c259e3331632fd62f0566"
+                                            }
+                                        ],
+                                        "language_id_name" : "Chinese - People's Republic of China"
+                                    },
+                                    {
+                                        "name" : "138",
+                                        "type" : "RT_HTML",
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "1fb54849afa28157eb7ba265e5d5034c"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "7c82f670ad20394353e2b3b6b2e1846b4fcd79f9"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "4aebe2894c07195b370b7186e9511eb9926b00de71237237a9e104f376bff52f"
+                                            }
+                                        ],
+                                        "language_id_name" : "Chinese - People's Republic of China"
+                                    },
+                                    {
+                                        "name" : "136",
+                                        "type" : "241",
+                                        "hashes" : [
+                                            {
+                                                "name" : "md5",
+                                                "value" : "18bcadf0f382868d2339c4ce7caa41aa"
+                                            },
+                                            {
+                                                "name" : "sha1",
+                                                "value" : "1c7a3481baaa8b77de19ab8f10c89f6e00333608"
+                                            },
+                                            {
+                                                "name" : "sha256",
+                                                "value" : "43c00e942bc051df784e34f8d07c0a57c84d056cea08f539f371018c49821df6"
+                                            }
+                                        ],
+                                        "language_id_name" : "Chinese - People's Republic of China"
+                                    }
+                                ],
+                                "rich_header" : {}
+                            }
+                        },
+                        "certificate" : {
+                            "certificates" : [
+                                {
+                                    "valid_from" : "Feb 24 17:33:40 2016 GMT",
+                                    "public_key_modulus" : "ACC2552B5FC1AB9420A7C74A1EAEE86B1BE17C28CD3011F0D33354E4E93F46C8A60EBD35E06F824635FBD4CE4C07238AE4AF5BE9FAC87C6930FB1BFBF32C706229BB50A4F4A4C4515B5AADC73758FF11E419D1DDBF3DC0C6A18D20231B9B4CFBD7CC45F855F0081C7338ACAC000A219EB961EDF5E782B233BA24F79C58A865133CB1CE8D017DD14C569C5FD327A5EF6C104A6318E34358630E61DABF621A06F416A64D1BF2B6D8694CDB3105C7E2088F0FE7A293B4AEB83C3F5573CE4865876C75CD7B96063079F1543432F41A8DE27AEF542952263F0708AC4B13C6E823A9BBEEA48747AABB54ACAA287A1E7EF4C41B72E7AD01C995E6AF3F2B9FC4174B3A3B",
+                                    "expired" : true,
+                                    "signature" : "18CDEBB8111A77C37BDE94283CD4B6E57A8BEF470FF5632AA0ED6C690302ED29317FF309922AA469C7DD81D674E7E7AFFFD15C7C2DE36A42F02AACDB431E0E6A893E5274D1058187E478AEC84C2139AB9A587A8C694838B55C214ECAF0441704DC95E3320BB02CDF7EDD8E97C703585ABF3FE5C3D2FE1FC267A81F675B9553DD4FE4194FC3542539C0F75ABD73D7427DD8F5875DE4AF4E67C5DEF3B648B43DD857068D6019116A372E7B555ECBCDF0AE55C87A10BF6A610233E35587943DE746CADD99EB093DEEA0FD93B3C2EAA9DC97C53627BDBEB0A504EDA86F0E0AACE751E1D65200BCB9E729EEC26836C21B6703645A14713C2BDB47AD27251B52394060",
+                                    "valid_to" : "Feb 23 23:33:40 2017 GMT",
+                                    "version" : 2,
+                                    "extensions" : [
+                                        {
+                                            "is_critical" : true,
+                                            "name" : "X509v3 Basic Constraints",
+                                            "value" : "CA:FALSE"
+                                        },
+                                        {
+                                            "is_critical" : true,
+                                            "name" : "X509v3 Extended Key Usage",
+                                            "value" : "Code Signing"
+                                        }
+                                    ],
+                                    "signature_algorithm" : "sha256WithRSAEncryption",
+                                    "serial_number" : "42D5853C28C3EF9344EB1688AAE8AA1E",
+                                    "thumbprint" : "1AA225A05C9E368C516041C9195EB1E148EAB533FD61702B34516E412F91D09B",
+                                    "issuer" : "commonName=cayildir",
+                                    "public_key_exponent" : "010001",
+                                    "thumbprint_algorithm" : "SHA256",
+                                    "subject" : "commonName=cayildir"
+                                },
+                                {
+                                    "valid_from" : "Feb 24 17:33:40 2016 GMT",
+                                    "public_key_modulus" : "ACC2552B5FC1AB9420A7C74A1EAEE86B1BE17C28CD3011F0D33354E4E93F46C8A60EBD35E06F824635FBD4CE4C07238AE4AF5BE9FAC87C6930FB1BFBF32C706229BB50A4F4A4C4515B5AADC73758FF11E419D1DDBF3DC0C6A18D20231B9B4CFBD7CC45F855F0081C7338ACAC000A219EB961EDF5E782B233BA24F79C58A865133CB1CE8D017DD14C569C5FD327A5EF6C104A6318E34358630E61DABF621A06F416A64D1BF2B6D8694CDB3105C7E2088F0FE7A293B4AEB83C3F5573CE4865876C75CD7B96063079F1543432F41A8DE27AEF542952263F0708AC4B13C6E823A9BBEEA48747AABB54ACAA287A1E7EF4C41B72E7AD01C995E6AF3F2B9FC4174B3A3B",
+                                    "expired" : true,
+                                    "signature" : "18CDEBB8111A77C37BDE94283CD4B6E57A8BEF470FF5632AA0ED6C690302ED29317FF309922AA469C7DD81D674E7E7AFFFD15C7C2DE36A42F02AACDB431E0E6A893E5274D1058187E478AEC84C2139AB9A587A8C694838B55C214ECAF0441704DC95E3320BB02CDF7EDD8E97C703585ABF3FE5C3D2FE1FC267A81F675B9553DD4FE4194FC3542539C0F75ABD73D7427DD8F5875DE4AF4E67C5DEF3B648B43DD857068D6019116A372E7B555ECBCDF0AE55C87A10BF6A610233E35587943DE746CADD99EB093DEEA0FD93B3C2EAA9DC97C53627BDBEB0A504EDA86F0E0AACE751E1D65200BCB9E729EEC26836C21B6703645A14713C2BDB47AD27251B52394060",
+                                    "valid_to" : "Feb 23 23:33:40 2017 GMT",
+                                    "version" : 2,
+                                    "extensions" : [
+                                        {
+                                            "is_critical" : true,
+                                            "name" : "X509v3 Basic Constraints",
+                                            "value" : "CA:FALSE"
+                                        },
+                                        {
+                                            "is_critical" : true,
+                                            "name" : "X509v3 Extended Key Usage",
+                                            "value" : "Code Signing"
+                                        }
+                                    ],
+                                    "signature_algorithm" : "sha256WithRSAEncryption",
+                                    "serial_number" : "42D5853C28C3EF9344EB1688AAE8AA1E",
+                                    "thumbprint" : "1AA225A05C9E368C516041C9195EB1E148EAB533FD61702B34516E412F91D09B",
+                                    "issuer" : "commonName=cayildir",
+                                    "public_key_exponent" : "010001",
+                                    "thumbprint_algorithm" : "SHA256",
+                                    "subject" : "commonName=cayildir"
+                                }
+                            ],
+                            "signer_info" : {
+                                "digest_encrypt_algorithm" : "rsaEncryption",
+                                "unauthenticated_attributes" : [
+                                    {
+                                        "digest_encrypt_algorithm" : "rsaEncryption",
+                                        "authenticated_attributes" : [
+                                            {
+                                                "name" : "1.3.6.1.4.1.311.2.1.12"
+                                            },
+                                            {
+                                                "name" : "contentType",
+                                                "value" : "SPC_INDIRECT_DATA_OBJID"
+                                            },
+                                            {
+                                                "name" : "1.3.6.1.4.1.311.2.1.11",
+                                                "value" : "#300C060A2B060104018237020115"
+                                            },
+                                            {
+                                                "name" : "messageDigest",
+                                                "value" : "#0420296E41D3EDE5244B95669B314CBC2EBF3B53E7A65D61E5D8BF40A7D84BA62488"
+                                            }
+                                        ],
+                                        "encrypted_digest" : "65527D5CEA351A35F98C83CEB37D10EF05124A75D4771630B186A3920C0FBDD494FD382035DA58A5A4428A27236024EBD966739FB5489346D6710696E65ADAF1FA6880DE8515B8779354CFB44B1ABE0CB6AA72BAE81D5A3ED9B9A368599C0FC75817697C39BBBE8BB287483B48FB794DF7584700A7B67FD7A8738E97584B0BB799B02F1125B34B000D9864E302F426B44BF28CAA744C418430F3C7EBAB29406667B8AD0C882D84B5B142195A8291168C6316EABC80CA4612C47A0D036D3552ABE228C3CB3002DD095EB491A824CEA79A46E220C5125AABC9EE72363D6C626E8FE6851965F26CC6269B641BFB0B1A4375842145460B09CCC4AAE5884F1B017B29",
+                                        "version" : 1,
+                                        "serial_number" : "42D5853C28C3EF9344EB1688AAE8AA1E",
+                                        "digest_algorithm" : "sha256",
+                                        "issuer" : "commonName=cayildir"
+                                    }
+                                ],
+                                "authenticated_attributes" : [
+                                    {
+                                        "name" : "1.3.6.1.4.1.311.2.1.12"
+                                    },
+                                    {
+                                        "name" : "contentType",
+                                        "value" : "SPC_INDIRECT_DATA_OBJID"
+                                    },
+                                    {
+                                        "name" : "1.3.6.1.4.1.311.2.1.11",
+                                        "value" : "#300C060A2B060104018237020115"
+                                    },
+                                    {
+                                        "name" : "messageDigest",
+                                        "value" : "#041477A33C304387D9B32CCA2678AC35A3A8987AA87B"
+                                    }
+                                ],
+                                "encrypted_digest" : "49581FD84EB36D8EC88F37485A1956658A3820310B27E4A0DFA7929F1AE6DB9EFA1EB7CAB54E8294F51E22E5752018531961E3767B068C1D8202C5E73BE2A3043B5A23C1C88C76F68F1CFD1473E265FBE24C67C56E29FFB9D6E8999CFF211970B8E91FE87479E6B23F71D1FB8CF2A0905434B3F74BC100F5C434A13989F7C0721D2B2C22670FFE60F2240235BCDF2D8A86E0F125EE527897768248883AB631EB40044718E7BF43F912C02FF94A777A4BC65DEE8935881A262A49FA705F23BE9D93A03E66B96812D093CB55EE2F21F17BDFD9847D598868DC1ACA17416274CA362A5D042CAB685D6F96F40D6F0CACD99377E5A438B57B3E6B57AD549538631779",
+                                "version" : 1,
+                                "serial_number" : "42D5853C28C3EF9344EB1688AAE8AA1E",
+                                "digest_algorithm" : "sha1",
+                                "issuer" : "commonName=cayildir"
+                            }
+                        }
+                    }
+                },
+                {
+                    "info" : {
+                        "file" : {
+                            "file_name" : "0",
+                            "hashes" : [
+                                {
+                                    "name" : "md5",
+                                    "value" : "08b28f94e209f9b7ea3c0a9698cedb2b"
+                                },
+                                {
+                                    "name" : "rha0",
+                                    "value" : "d8fc8a011d9128b9b27cf64ebf6756e4658e97d2"
+                                },
+                                {
+                                    "name" : "sha1",
+                                    "value" : "d8fc8a011d9128b9b27cf64ebf6756e4658e97d2"
+                                },
+                                {
+                                    "name" : "sha256",
+                                    "value" : "8d312a5fabf56076597cbcabdaa5b5fa1a726796364c259e3331632fd62f0566"
+                                }
+                            ]
+                        }
+                    },
+                    "classification" : {
+                        "scan_results" : [
+                            {
+                                "version" : "3.9.4.0",
+                                "type" : "internal",
+                                "name" : "TitaniumCore",
+                                "classification" : 0,
+                                "factor" : 0
+                            }
+                        ],
+                        "classification" : 0,
+                        "factor" : 0
+                    }
+                }
+            ],
+            "dbtaskid" : "77be502fd84f959769250bb6"
+        },
+        "signer_info" : {
+
+        },
+        "status" : "clean",
+        "version" : {
+            "worker" : "1.6.2",
+            "server" : "1.2"
+        }
+    },
+    "research" : {
+        "results" : {
+            "job_ids" : [
+                "110701"
+            ],
+            "jobs" : {
+                "110701" : {
+                    "job_id" : 110701,
+                    "process_graph" : null,
+                    "gfs" : {
+
+                    },
+                    "observed_behavior" : {
+                        "Defense Evasion" : {
+                            "The executable contains unknown PE section names indicative of a packer could be a false positive " : {
+                                "score" : 1,
+                                "severity" : "low",
+                                "details" : [
+
+                                ]
+                            },
+                            "severity" : "medium",
+                            "score" : 2,
+                            "The file contains an unknown PE resource name possibly indicative of a packer" : {
+                                "score" : 1,
+                                "severity" : "low",
+                                "details" : [
+
+                                ]
+                            },
+                            "Allocates read write execute memory usually to unpack itself " : {
+                                "score" : 2,
+                                "severity" : "medium",
+                                "details" : [
+
+                                ]
+                            },
+                            "The binary likely contains encrypted or compressed data indicative of a packer" : {
+                                "score" : 2,
+                                "severity" : "medium",
+                                "details" : [
+
+                                ]
+                            }
+                        },
+                        "Heuristics" : {
+                            "Foreign language identified in PE resource" : {
+                                "score" : 2,
+                                "severity" : "medium",
+                                "details" : [
+
+                                ]
+                            },
+                            "severity" : "medium",
+                            "score" : 2
+                        },
+                        "ns_custom_known_av" : {
+                            "User Execution" : {
+                                "score" : 4,
+                                "severity" : "high",
+                                "details" : [
+
+                                ]
+                            },
+                            "severity" : "high",
+                            "score" : 4
+                        },
+                        "severity" : "high",
+                        "score" : 4
+                    },
+                    "accessed_host" : [
+                        {
+                            "ip" : "192.168.101.7",
+                            "protocol" : "UDP",
+                            "port" : 137,
+                            "coordinates" : [
+                                "N/A",
+                                "N/A"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "version" : "1.0"
+        },
+        "version" : {
+
+        },
+        "scan_duration" : 0,
+        "detection_name" : [
+
+        ],
+        "detection_type" : [
+
+        ],
+        "severity" : [
+
+        ],
+        "score" : 0,
+        "url_list" : [
+
+        ],
+        "status" : "unknown"
+    }
+}
