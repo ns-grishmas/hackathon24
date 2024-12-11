@@ -3,8 +3,6 @@ Contains mongo connection details
 """
 
 import pymongo
-import time
-import datetime
 
 class DataLayer(object):
     def __init__(self):

@@ -4,18 +4,11 @@ This file reads from json
 
 import json
 
-SIGNER_CONFIG_FILE = '../resources/pe_allowlist_blocklist_config.json'
+SIGNER_CONFIG_FILE = 'resources/pe_allowlist_blocklist_config.json'
 
 class File(object):
     def __init__(self):
         pass
-
-    @staticmethod
-    def read_file():
-        # Open and read the JSON file
-        with open('../resources/sample_detected_file.json', 'r') as file:
-            data = json.load(file)
-        return data
 
     @staticmethod
     def read_signer_config():

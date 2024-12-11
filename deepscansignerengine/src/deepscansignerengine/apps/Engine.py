@@ -13,7 +13,6 @@ This file takes care of parsing signer info and publishing in config for later s
 import json
 import time
 import datetime
-import re
 from Conn import DataLayer
 from File import File
 
@@ -34,37 +33,32 @@ class Engine(object):
                        "rlabs.result.tc_report.0.metadata.certificate.signer_info.version":1}
             records = DataLayer.get_document(DBNAME, COLLNAME, dbQuery)
             for record in records:
-                print(record['_id'])
-                self.process_signer_info(record['rlabs']['result']['tc_report'][0])
+                self.process_signer_info(record['rlabs']['result']['tc_report'][0], record['_id'])
         except Exception as e:
             print("Exception in querying into mongo: {}".format(e))
 
 
-    def process_signer_info(self, tc_report_data):
+    def process_signer_info(self, tc_report_data, md5):
         update_blocklist = True
         try:
-            #print(tc_report_data)
             configData = File.read_signer_config()
-            #print(configData)
             if tc_report_data['classification']['classification'] >= 3 and tc_report_data['classification']['factor'] >= 2:
-                #print("after classifi check")
                 serial_number = tc_report_data['metadata']['certificate']['signer_info']['serial_number'].lower()
                 common_name = tc_report_data['metadata']['certificate']['signer_info']['issuer']
-                #print(common_name)
-                #print("countryName" not in common_name)
                 if "countryName" not in common_name:
                     for bl in configData.get('blocklist', []):
                         if common_name == (COMMON_NAME + bl.get('common_name', '')) and \
                         (bl.get('serial_number','') in [serial_number, '*']):
                             update_blocklist = False
                     if update_blocklist:
-                        return self.update_signer_config(configData, common_name, serial_number, tc_report_data['classification']['scan_results'][0]['result'])
-            print("Entry present or no signer info present")
+                        print("Processing for md5: {}".format(md5))
+                        return self.update_signer_config(configData, common_name, serial_number, tc_report_data['classification']['scan_results'][0]['result'], md5)
+            print("Malicious signer info not found")
         except Exception as e:
             print("Exception in processing signer info: {}".format(e))
 
 
-    def update_signer_config(self, configData, common_name, serial_number, detection_name):
+    def update_signer_config(self, configData, common_name, serial_number, detection_name, md5):
         try:
             signed_info = {}
             signed_info['common_name'] = common_name.rsplit(COMMON_NAME)[1]
@@ -73,8 +67,8 @@ class Engine(object):
             signed_info['serial_number'] = serial_number
             block_list = configData.get('blocklist', [])
             block_list.append(signed_info)
-            print(configData)
             File.write_signer_info(configData)
+            print("Signer info updated for md5 : {}, serial no : {}".format(md5, serial_number))
         except Exception as e:
             print("Exception in updating signer info: {}".format(e))
 
