@@ -4,8 +4,7 @@ This file reads from json
 
 import json
 
-COMMON_NAME = "commonName="
-SIGNER_CONFIG_FILE = '../resources/signer_config.json'
+SIGNER_CONFIG_FILE = '../resources/pe_allowlist_blocklist_config.json'
 
 class File(object):
     def __init__(self):

@@ -17,12 +17,11 @@ from Conn import DataLayer
 from File import File
 
 DBNAME = "global_tss_v2"
-#COLLNAME = "deepscan_detection_results"
-COLLNAME = "deepscan_research_data"
+COLLNAME = "deepscan_detection_results"
 COMMON_NAME = "commonName="
 
 class Engine(object):
-    def __init__(self) -> None:
+    def __init__(self):
         pass
 
     def get_and_process_rlabs_data(self):
@@ -34,7 +33,8 @@ class Engine(object):
                        "rlabs.result.tc_report.0.metadata.certificate.signer_info.version":1}
             records = DataLayer.get_document(DBNAME, COLLNAME, dbQuery)
             for record in records:
-                self.process_signer_info(record['rlabs']['result']['tc_report'][0])
+                stripped_record = json.loads(json.dumps(record['rlabs']['result']['tc_report'][0]).replace("\\", ""))
+                self.process_signer_info(stripped_record)
         except Exception as e:
             print("Exception in querying into mongo: {}".format(e))
 
@@ -43,15 +43,16 @@ class Engine(object):
         update_blocklist = True
         try:
             configData = File.read_signer_config()
-            if tc_report_data['classification']['classification'] > 3 or tc_report_data['classification']['factor'] > 3:
+            if tc_report_data['classification']['classification'] >= 3 and tc_report_data['classification']['factor'] >= 2:
                 serial_number = tc_report_data['metadata']['certificate']['signer_info']['serial_number'].lower()
                 common_name = tc_report_data['metadata']['certificate']['signer_info']['issuer']
-                for bl in configData.get('blocklist', []):
-                    if common_name == (COMMON_NAME + bl.get('common_name', '')) and \
-                    (bl.get('serial_number','') in [serial_number, '*']):
-                        update_blocklist = False
-                if update_blocklist:
-                    return self.update_signer_config(configData, common_name, serial_number, tc_report_data['classification']['scan_results'][0]['result'])
+                if "countryName" not in common_name:
+                    for bl in configData.get('blocklist', []):
+                        if common_name == (COMMON_NAME + bl.get('common_name', '')) and \
+                        (bl.get('serial_number','') in [serial_number, '*']):
+                            update_blocklist = False
+                    if update_blocklist:
+                        return self.update_signer_config(configData, common_name, serial_number, tc_report_data['classification']['scan_results'][0]['result'])
             print("Entry present or no signer info present")
         except Exception as e:
             print("Exception in processing signer info: {}".format(e))

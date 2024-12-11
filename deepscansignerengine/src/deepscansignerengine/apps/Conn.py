@@ -13,8 +13,7 @@ class DataLayer(object):
     @staticmethod
     def get_mongo_client():
         try:
-            return pymongo.MongoClient("mongodb://mtp_admin:S3cur3Th3Cl0ud@10.136.124.198:27017/admin?tlsinsecure=true")
-            #return pymongo.MongoClient("mongodb://mtp_admin:S3cur3Th3Cl0ud@10.136.127.9:27017/admin?tlsinsecure=true")
+            return pymongo.MongoClient("mongodb://mtp_admin:S3cur3Th3Cl0ud@10.136.127.9:27017/admin")
         except Exception as e:
             print("Exception in creating mongo client: {}".format(e))
 
@@ -36,7 +35,7 @@ class DataLayer(object):
     @staticmethod
     def get_document(dbName, collectionName, query):
         try:
-            cursor = DataLayer.get_mongo_collection(dbName, collectionName).find(query).limit(5)
+            cursor = DataLayer.get_mongo_collection(dbName, collectionName).find(query)
             return cursor
         except Exception as e:
             print("Exception in querying for document in Mongo: {}".format(e))
