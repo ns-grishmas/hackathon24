@@ -13,6 +13,7 @@ This file takes care of parsing signer info and publishing in config for later s
 import json
 import time
 import datetime
+import re
 from Conn import DataLayer
 from File import File
 
@@ -33,8 +34,8 @@ class Engine(object):
                        "rlabs.result.tc_report.0.metadata.certificate.signer_info.version":1}
             records = DataLayer.get_document(DBNAME, COLLNAME, dbQuery)
             for record in records:
-                stripped_record = json.loads(json.dumps(record['rlabs']['result']['tc_report'][0]).replace("\\", ""))
-                self.process_signer_info(stripped_record)
+                print(record['_id'])
+                self.process_signer_info(record['rlabs']['result']['tc_report'][0])
         except Exception as e:
             print("Exception in querying into mongo: {}".format(e))
 
@@ -42,10 +43,15 @@ class Engine(object):
     def process_signer_info(self, tc_report_data):
         update_blocklist = True
         try:
+            #print(tc_report_data)
             configData = File.read_signer_config()
+            #print(configData)
             if tc_report_data['classification']['classification'] >= 3 and tc_report_data['classification']['factor'] >= 2:
+                #print("after classifi check")
                 serial_number = tc_report_data['metadata']['certificate']['signer_info']['serial_number'].lower()
                 common_name = tc_report_data['metadata']['certificate']['signer_info']['issuer']
+                #print(common_name)
+                #print("countryName" not in common_name)
                 if "countryName" not in common_name:
                     for bl in configData.get('blocklist', []):
                         if common_name == (COMMON_NAME + bl.get('common_name', '')) and \
