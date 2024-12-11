@@ -1,5 +1,5 @@
 """
-This file reads from json
+This file class helps in parsing through the Mongo resultset 
 """
 
 import json

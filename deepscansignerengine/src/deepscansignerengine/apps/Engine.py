@@ -1,13 +1,6 @@
 """
 This file takes care of parsing signer info and publishing in config for later scan.
 """
-# Make Mongo connection
-# Query into mongo
-# Pull a day's data
-# Store the data in the file
-# Parse the data and pull classification and signer info
-# Based on criteria Put the corrupted one in config if it is not present
-# Let the pesigner read from this config and detect the malware
 
 
 import json
@@ -25,6 +18,10 @@ class Engine(object):
         pass
 
     def get_and_process_rlabs_data(self):
+        '''
+        This method queries into the mongo collection and pulls the required data
+        @return: None
+        '''
         try:
             timeNow = time.time()
             timeYesterday = timeNow - 286400
@@ -39,6 +36,12 @@ class Engine(object):
 
 
     def process_signer_info(self, tc_report_data, md5):
+        '''
+        This method processes the response received from rlabs and find for malicious content
+        @param: tc_report_data - tc_report data element consisting of malicious signer info
+        @param: md5 - md5 of the scanned file
+        @return: None
+        '''
         update_blocklist = True
         try:
             configData = File.read_signer_config()
@@ -59,6 +62,15 @@ class Engine(object):
 
 
     def update_signer_config(self, configData, common_name, serial_number, detection_name, md5):
+        '''
+        This method updates the local config file with the malicious signer information
+        @param: configData - Blocklist config info before update
+        @param: common_name - issuer of the certificate
+        @param: serial_number - serial_number of the certificate
+        @param: detection_name - detection_name of the certificate
+        @param: md5 - md5 of the scanned file
+        @return: None
+        '''
         try:
             signed_info = {}
             signed_info['common_name'] = common_name.rsplit(COMMON_NAME)[1]
